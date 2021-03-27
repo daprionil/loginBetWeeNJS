@@ -1,0 +1,248 @@
+//Variables
+$blancoPrimario: rgb(226, 226, 226);
+$blancoSegundario: rgb(200, 200, 200);
+$colorAzulPrimario: rgb(0, 140, 255);
+$colorNegroSegundario: rgb(32, 32, 32);
+$colorNegroTerciario: rgb(44, 44, 44);
+//Mixins
+@mixin boton {
+    background: $colorNegroTerciario;
+    border: none;
+    transition: all 0.3s;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    &:focus {
+        background: $colorAzulPrimario;
+        outline: none;
+    }
+    &:hover {
+        background: $colorAzulPrimario;
+    }
+}
+//GLOBAL CLASS
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+a {
+    color: white;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+a,
+p,
+li,
+span {
+    font-size: 18px;
+}
+.animationOpacity {
+    animation: animationOpacity1;
+    animation-duration: 1500ms;
+    animation-timing-function: linear;
+
+    @keyframes animationOpacity1 {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}
+.shadowBox {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.452);
+}
+.boton {
+    @include boton();
+    background: $colorAzulPrimario;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    &:focus {
+        box-shadow: 2px 2px 0 rgb(0, 81, 255);
+    }
+    &:hover {
+        box-shadow: 2px 2px 0 rgb(0, 81, 255);
+        transform: translateX(-1%) translateY(-1%);
+    }
+}
+
+//Body
+
+body {
+    background: $blancoPrimario;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    .container {
+        width: 500px;
+        border-radius: 20px;
+        background: $blancoSegundario;
+        .card-login {
+            padding: 20px;
+            //BOTTOM CARD
+            .ctn-bottom {
+                display: grid;
+                align-content: center;
+                align-items: center;
+                justify-items: center;
+                justify-content: center;
+                gap: 15px;
+                //TOP
+                .ctn-top-bottom {
+                    //title
+                    .ctn-title-top {
+                        text-align: center;
+                        p {
+                            font-size: 180%;
+                            padding: 5px;
+                            text-transform: uppercase;
+                            font-weight: bold;
+                            color: $colorAzulPrimario;
+                            text-shadow: 0.5px 0.5px 0 $blancoPrimario;
+                        }
+                    }
+                    //descripcion
+                    .ctn-desc-top {
+                        text-align: center;
+                        color: $colorNegroSegundario;
+                        p {
+                            background: $blancoSegundario;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+                //MIDDLE AND INPUTS
+                .ctn-middle-bottom {
+                    width: 90%;
+                    margin: auto;
+                    text-align: center;
+                    .formulario {
+                        display: grid;
+                        width: 100%;
+                        gap: 15px;
+                        //Input Class Box
+                        .input {
+                            border-bottom: 2px solid $colorAzulPrimario;
+                            border-radius: 0 0 50% 50%;
+                            padding-bottom: 10px;
+                            margin: 10px 5px;
+                            padding: auto 5px;
+                            display: flex;
+                            align-items: center;
+                            justify-items: center;
+                            .icon {
+                                font-size: 120%;
+                                margin-left: 10px;
+                                color: $colorAzulPrimario;
+                            }
+                        }
+                        //Cuando la clase Input en el div tenga true o false se aplican sus estilos
+                        .input.true {
+                            border-bottom: 2px solid #01d30c;
+                        }
+                        .input.false {
+                            border-bottom: 2px solid #ff0000;
+                        }
+                        //Input Etiqueta
+                        input {
+                            outline: none;
+                            border: none;
+                            background: none;
+                            padding: 5px;
+                            width: 100%;
+                            margin-left: 5px;
+                            font-size: 130%;
+                            &:focus {
+                                background: none;
+                            }
+                        }
+                        //Mensaje de Error Al validar
+                        .mensaje-error {
+                            padding: 3px;
+                            border-radius: 10px;
+                            color: white;
+                            background: rgb(255, 0, 0);
+                        }
+                        .mensaje-exitoso {
+                            padding: 3px;
+                            border-radius: 10px;
+                            color: white;
+                            background: rgba(9, 255, 0, 0.781);
+                        }
+                        //Animation Loaded
+                        .spinner {
+                            display: none;
+                            margin: 10px auto 0;
+                            width: 70px;
+                            text-align: center;
+                            div {
+                                width: 18px;
+                                height: 18px;
+                                background-color: $colorAzulPrimario;
+
+                                border-radius: 100%;
+                                display: inline-block;
+                                -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+                                animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+                            }
+                            .bounce1 {
+                                -webkit-animation-delay: -0.32s;
+                                animation-delay: -0.32s;
+                            }
+
+                            .bounce2 {
+                                -webkit-animation-delay: -0.16s;
+                                animation-delay: -0.16s;
+                            }
+                            @-webkit-keyframes sk-bouncedelay {
+                                0%,
+                                80%,
+                                100% {
+                                    -webkit-transform: scale(0);
+                                }
+                                40% {
+                                    -webkit-transform: scale(1);
+                                }
+                            }
+
+                            @keyframes sk-bouncedelay {
+                                0%,
+                                80%,
+                                100% {
+                                    -webkit-transform: scale(0);
+                                    transform: scale(0);
+                                }
+                                40% {
+                                    -webkit-transform: scale(1);
+                                    transform: scale(1);
+                                }
+                            }
+                        }
+                    }
+                }
+                //bottom and Footer of card login
+                .ctn-bottom-bottom {
+                    background: #00000017;
+                    padding: 5px;
+                    border-radius: 5px;
+                    text-align: center;
+                    a {
+                        color: $colorAzulPrimario;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a,
+p,
+li,
+span {
+  font-size: 18px;
+}
+
+.animationOpacity {
+  -webkit-animation: animationOpacity1;
+          animation: animationOpacity1;
+  -webkit-animation-duration: 1500ms;
+          animation-duration: 1500ms;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes animationOpacity1 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animationOpacity1 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.shadowBox {
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.452);
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.452);
+}
+
+.boton {
+  background: #2c2c2c;
+  border: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  background: #008cff;
+  color: black;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+.boton:focus {
+  background: #008cff;
+  outline: none;
+}
+
+.boton:hover {
+  background: #008cff;
+}
+
+.boton:focus {
+  -webkit-box-shadow: 2px 2px 0 #0051ff;
+          box-shadow: 2px 2px 0 #0051ff;
+}
+
+.boton:hover {
+  -webkit-box-shadow: 2px 2px 0 #0051ff;
+          box-shadow: 2px 2px 0 #0051ff;
+  -webkit-transform: translateX(-1%) translateY(-1%);
+          transform: translateX(-1%) translateY(-1%);
+}
+
+body {
+  background: #e2e2e2;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container {
+  width: 500px;
+  border-radius: 20px;
+  background: #c8c8c8;
+}
+
+body .container .card-login {
+  padding: 20px;
+}
+
+body .container .card-login .ctn-bottom {
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 15px;
+}
+
+body .container .card-login .ctn-bottom .ctn-top-bottom .ctn-title-top {
+  text-align: center;
+}
+
+body .container .card-login .ctn-bottom .ctn-top-bottom .ctn-title-top p {
+  font-size: 180%;
+  padding: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #008cff;
+  text-shadow: 0.5px 0.5px 0 #e2e2e2;
+}
+
+body .container .card-login .ctn-bottom .ctn-top-bottom .ctn-desc-top {
+  text-align: center;
+  color: #202020;
+}
+
+body .container .card-login .ctn-bottom .ctn-top-bottom .ctn-desc-top p {
+  background: #c8c8c8;
+  border-radius: 10px;
+}
+
+body .container .card-login .ctn-bottom .ctn-middle-bottom {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+body .container .card-login .ctn-bottom .ctn-middle-bottom .formulario {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  gap: 15px;
+}
+
+body .container .card-login .ctn-bottom .ctn-middle-bottom .formulario .input {
+  border-bottom: 2px solid #008cff;
+  border-radius: 0 0 50% 50%;
+  padding-bottom: 10px;
+  margin: 10px 5px;
+  padding: auto 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+body .container .card-login .ctn-bottom .ctn-middle-bottom .formulario .input .icon {
+  font-size: 120%;
+  margin-left: 10px;
+  color: #008cff;
+}
+
+body .container .card-login .ctn-bottom .ctn-middle-bottom .formulario .input.true {
+  border-bottom: 2px solid #01d30c;
+}
+
+body .container .card-login .ctn-bottom .ctn-middle-bottom .formulario .input.false {
+  border-bottom: 2px solid #ff0000;
+}
+
+body .container .card-login .ctn-bottom .ctn-middle-bottom .formulario input {
+  outline: none;
+  border: none;
+  background: none;
+  padding: 5px;
+  width: 100%;
+  margin-left: 5px;
+  font-size: 130%;
+}
+
+body .container .card-login .ctn-bottom .ctn-middle-bottom .formulario input:focus {
+  background: none;
+}
+
+body .container .card-login .ctn-bottom .ctn-middle-bottom .formulario .mensaje-error {
+  padding: 3px;
+  border-radius: 10px;
+  color: white;
+  background: red;
+}
+
+body .container .card-login .ctn-bottom .ctn-middle-bottom .formulario .mensaje-exitoso {
+  padding: 3px;
+  border-radius: 10px;
+  color: white;
+  background: rgba(9, 255, 0, 0.781);
+}
+
+body .container .card-login .ctn-bottom .ctn-middle-bottom .formulario .spinner {
+  display: none;
+  margin: 10px auto 0;
+  width: 70px;
+  text-align: center;
+}
+
+body .container .card-login .ctn-bottom .ctn-middle-bottom .formulario .spinner div {
+  width: 18px;
+  height: 18px;
+  background-color: #008cff;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+body .container .card-login .ctn-bottom .ctn-middle-bottom .formulario .spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+body .container .card-login .ctn-bottom .ctn-middle-bottom .formulario .spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+body .container .card-login .ctn-bottom .ctn-bottom-bottom {
+  background: #00000017;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+body .container .card-login .ctn-bottom .ctn-bottom-bottom a {
+  color: #008cff;
+}
+/*# sourceMappingURL=style.css.map */

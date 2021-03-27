@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login BetWeenWeb">
+    <title>Login - BetWeenWeb</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="shortcut icon" href="img/iconBetweenWeb.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <div class="container animationOpacity shadowBox">
+        <div class="card-login">
+            <div class="ctn-bottom">
+                <div class="ctn-top-bottom">
+                    <div class="ctn-title-top">
+                        <p>BetWeenWeb</p>
+                    </div>
+                    <div class="ctn-desc-top">
+                        <p>Registrarse</p>
+                    </div>
+                </div>
+                <div class="ctn-middle-bottom">
+                    <form id="formularioLogIn" class="formulario">
+                        <div class="ctn-input-username input">
+                            <i class="fas fa-user-astronaut icon"></i>
+                            <input class="username" type="text" name="username" id="username" placeholder="Nombre de Usuario">
+                        </div>
+                        <div class="ctn-input-email input">
+                            <i class="fas fa-envelope icon"></i>
+                            <input class="email" type="email" name="email" id="email" placeholder="Correo Electronico">
+                        </div>                        
+                        <div class="ctn-input-password input">
+                            <i class="fas fa-key icon"></i>
+                            <input class="password" type="password" name="password" id="password" placeholder="Contraseña">
+                        </div>
+                        <div id="spinner" class="spinner">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="ctn-button-submit">
+                            <button class="boton" id="submit" type="submit">Registrarse</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="ctn-bottom-bottom">
+                    <p >¿Ya estás Registrado? <a href="#">Iniciar Sesion</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js" data-auto-a11y="true"></script>
+    <script src="js/login.js"></script>
+</body>
+
+</html>
